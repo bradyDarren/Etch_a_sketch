@@ -15,9 +15,13 @@ def clockwise():
 def counter_clockwise():
     thomas.setheading(thomas.heading() - 15)
 
+def clear(): 
+    screen.resetscreen()
+
 screen.listen()
 screen.onkey(key="w", fun=move_forward)
 screen.onkey(key="s", fun=move_backward)
 screen.onkey(key="d", fun=clockwise)
 screen.onkey(key="a", fun=counter_clockwise)
+screen.onkey(key="c", fun=clear)
 screen.exitonclick()
